@@ -1,5 +1,9 @@
 # HumanBehaviorAnalysis
 
+#Disclaimer
+
+If you are using NGROK Server and Firebase make your own account because the necessary permissions will not work for you.
+
 🚀 Project Showcase: Human Behavior Analysis Web App
 
 I am excited to present my latest project, a Human Behavior Analysis Web App, developed using Python's Flask framework and powered by Firebase Realtime Database. This project aims to analyze human behavior based on input data and provide insightful predictions.
