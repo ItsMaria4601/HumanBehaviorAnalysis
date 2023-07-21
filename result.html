@@ -1,0 +1,168 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>The prediction is: {{ prediction }}(LOG)</p>
+<p>The prediction is: {{ predictionb }}(SVM)</p>
+<p>The prediction is: {{ predictionc }}(DT)</p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+      <!-- Start Landing Page -->
+
+      <div class="landing-page">
+        <header>
+          <div class="container">
+            <a href="#" class="logo">Human Behavior Analysis</a>
+            <a href="/login" class="admin-button">Admin</a> <!-- Added admin button -->
+          </div>
+        </header>
+        <div class="content">
+          <div class="container">
+            <div class="info">
+              <h1>Prediction Result</h1>
+              {% if prediction == "ISTJ" %}
+        <p>The prediction is: ISTJ - The Inspector</p>
+        <ul>
+            <li>Practical and reliable individuals who value order, structure, and tradition.</li>
+            <li>Detail-oriented and methodical, paying attention to accuracy and following rules.</li>
+            <li>Responsible and dependable, often taking on leadership roles due to their sense of duty.</li>
+        </ul>
+    {% elif prediction == "ISFJ" %}
+        <p>The prediction is: ISFJ - The Protector</p>
+        <ul>
+            <li>Warm and caring individuals who are deeply committed to the well-being of others.</li>
+            <li>Loyal and reliable, they prioritize harmony, stability, and maintaining social conventions.</li>
+            <li>Attentive to the needs of others and often take on supportive roles in personal and professional relationships.</li>
+        </ul>
+    {% elif prediction == "INFJ" %}
+        <p>The prediction is: INFJ - The Counselor</p>
+        <ul>
+            <li>Insightful and empathetic individuals who have a deep understanding of others' emotions.</li>
+            <li>Creative and idealistic, they strive for personal growth and are driven by their values.</li>
+            <li>Passionate about making a positive impact and often pursue careers in counseling, advocacy, or creative fields.</li>
+        </ul>
+    {% elif prediction == "INTJ" %}
+        <p>The prediction is: INTJ - The Mastermind</p>
+        <ul>
+            <li>Logical and strategic thinkers who excel at analyzing complex problems and envisioning long-term solutions.</li>
+            <li>Independent and self-assured, they are often seen as visionaries and can be focused on their own goals.</li>
+            <li>Value efficiency and competence, seeking knowledge and competence in their areas of interest.</li>
+        </ul>
+    {% elif prediction == "ISTP" %}
+        <p>The prediction is: ISTP - The Craftsman</p>
+        <ul>
+            <li>Analytical and hands-on individuals who thrive in practical and technical fields.</li>
+            <li>Adaptable and independent, they enjoy exploring and understanding how things work.</li>
+            <li>Often skilled at troubleshooting and problem-solving, they prefer to learn through direct experience.</li>
+        </ul>
+    {% elif prediction == "ISFP" %}
+        <p>The prediction is: ISFP - The Composer</p>
+        <ul>
+            <li>Gentle and caring individuals with a deep appreciation for aesthetics and beauty.</li>
+            <li>Artistic and sensitive, they value personal expression and enjoy creative pursuits.</li>
+            <li>Often have a strong connection with nature and prioritize harmonious relationships.</li>
+        </ul>
+    {% elif prediction == "INFP" %}
+        <p>The prediction is: INFP - The Healer</p>
+        <ul>
+            <li>Idealistic and empathetic individuals driven by their values and a desire for personal growth.</li>
+            <li>Creative and insightful, they have a deep understanding of human emotions and motivations.</li>
+            <li>Often passionate about helping others and making a positive impact in the world.</li>
+        </ul>
+    {% elif prediction == "INTP" %}
+        <p>The prediction is: INTP - The Architect</p>
+        <ul>
+            <li>Logical and innovative thinkers who excel in analyzing complex ideas and developing theoretical frameworks.</li>
+            <li>Independent and curious, they enjoy exploring new concepts and ideas.</li>
+            <li>Value intellectual freedom and often engage in intellectual pursuits or scientific research.</li>
+        </ul>
+    {% elif prediction == "ESTP" %}
+        <p>The prediction is: ESTP - The Dynamo</p>
+        <ul>
+            <li>Energetic and outgoing individuals who thrive in dynamic and action-oriented environments.</li>
+            <li>Practical problem-solvers who enjoy taking risks and seeking immediate results.</li>
+            <li>Adaptable and resourceful, they excel in hands-on activities and enjoy being at the center of attention.</li>
+        </ul>
+    {% elif prediction == "ESFP" %}
+        <p>The prediction is: ESFP - The Performer</p>
+        <ul>
+            <li>Spontaneous and playful individuals who enjoy being in the spotlight and entertaining others.</li>
+            <li>Social and enthusiastic, they have a knack for creating a lively and enjoyable atmosphere.</li>
+            <li>Often skilled in artistic and performance-related fields, they seek excitement and new experiences.</li>
+        </ul>
+    {% elif prediction == "ENFP" %}
+        <p>The prediction is: ENFP - The Champion</p>
+        <ul>
+            <li>Enthusiastic and creative individuals driven by their passion and desire to make a positive impact.</li>
+            <li>Empathetic and values-driven, they excel in connecting with others and inspiring change.</li>
+            <li>Often engaged in creative pursuits and enjoy exploring various possibilities and ideas.</li>
+        </ul>
+    {% elif prediction == "ENTP" %}
+        <p>The prediction is: ENTP - The Visionary</p>
+        <ul>
+            <li>Curious and innovative thinkers who thrive on intellectual challenges and exploring new concepts.</li>
+            <li>Adaptable and independent, they enjoy debating ideas and pushing boundaries.</li>
+            <li>Often seen as natural problem-solvers and enjoy engaging in intellectual discussions.</li>
+        </ul>
+    {% elif prediction == "ESTJ" %}
+        <p>The prediction is: ESTJ - The Supervisor</p>
+        <ul>
+            <li>Efficient and practical individuals who value order, structure, and tradition.</li>
+            <li>Organized and responsible, they excel in leadership positions and follow established protocols.</li>
+            <li>Often focused on achieving goals and maintaining stability in their personal and professional lives.</li>
+        </ul>
+    {% elif prediction == "ESFJ" %}
+        <p>The prediction is: ESFJ - The Provider</p>
+        <ul>
+            <li>Warm and sociable individuals who are deeply caring and concerned about the well-being of others.</li>
+            <li>Responsible and conscientious, they thrive in supportive roles and value harmonious relationships.</li>
+            <li>Often involved in community building and enjoy creating a nurturing and inclusive environment.</li>
+        </ul>
+    {% elif prediction == "ENFJ" %}
+        <p>The prediction is: ENFJ - The Teacher</p>
+        <ul>
+            <li>Charismatic and empathetic individuals who have a natural talent for understanding and inspiring others.</li>
+            <li>Inspirational and supportive, they are driven to help others reach their full potential.</li>
+            <li>Often found in teaching, counseling, or leadership roles, they create a positive and nurturing atmosphere.</li>
+        </ul>
+    {% elif prediction == "ENTJ" %}
+        <p>The prediction is: ENTJ - The Commander</p>
+        <ul>
+            <li>Assertive and goal-oriented individuals who excel in strategic planning and organizing.</li>
+            <li>Confident and decisive, they have a strong vision and drive to achieve their goals.</li>
+            <li>Often seen as natural leaders, they value efficiency and are skilled at mobilizing and motivating others.</li>
+        </ul>
+    {% else %}
+        <p>No prediction available.</p>
+    {% endif %}
+              <form>
+                <input type="button" value="Go back!" onclick="history.back()">
+               </form>
+            </div>
+            <div class="image">
+              <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_1440,w_720,f_auto,q_auto/1896851/981934_74159.png">
+            </div>
+          </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC Survey Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function validateForm() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                if (input.type === "text" && !isValidInput(input.value)) {
+                    alert("Invalid input. Please enter valid text without special characters, numbers, or random spaces.");
+                    return false;
+                }
+                if (input.type === "text" && !isValidLength(input.value, input.name)) {
+                    return false;
+                }
+                if (input.type === "text" && !isValidSequence(input.value)) {
+                    alert("Invalid input. Please enter a valid response.");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function isValidInput(input) {
+            var regex = /^[a-zA-Z\s,.]+$/; // Only allows alphabets, spaces, commas, and periods
+            return regex.test(input.trim());
+        }
+
+        function isValidLength(input, name) {
+            var characterCount = input.length;
+            if (name === "text0") {
+                if (characterCount < 8 || characterCount > 20) {
+                    alert("Invalid input. Please enter your name between 8 and 20 characters.");
+                    return false;
+                }
+            } else {
+                if (characterCount < 20 || characterCount > 60) {
+                    alert("Invalid input. Please enter a response between 20 and 60 characters.");
+                    return false;
+                }
+            }
+            return true; 
+        }
+
+        function isValidSequence(input) {
+            // Regular expression to match any sequence of three or more characters repeated consecutively
+            var regex = /(.)\1{2,}/;
+            return !regex.test(input);
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Human Behavior Analysis</h1>
+            <p id="description" class="description text-center">
+                Our platform utilizes advanced algorithms to analyze questionnaire responses and generate accurate personality insights. It helps you make informed decisions and identify candidates whose personalities align with your organization's culture and job requirements.
+            </p>
+        </header>
+        <form id="survey-form" method="POST" action="/" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label id="name-label" for="text0">Enter Your Full Name</label>
+                <input type="text" name="text0" id="text0" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="text1">1. Are you more energized by social interactions or by spending time alone?</label>
+                <input type="text" name="text1" id="text1" class="form-control" placeholder="Enter your answer" required>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="text2">2. Do you tend to make decisions based on logic and reason or on your intuition and gut feelings?</label>
+                <input type="text" name="text2" id="text2" class="form-control" placeholder="Enter your answer" required>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="text3">3. How do you handle conflicts or disagreements with others?</label>
+                <input type="text" name="text3" id="text3" class="form-control" placeholder="Enter your answer">
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="text4">4. Do you prefer following a clear plan or enjoy having the freedom to explore different ideas and possibilities?</label>
+                <input type="text" name="text4" id="text4" class="form-control" placeholder="Enter your answer" required>
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="text5">5. How do you typically cope with stress and pressure in the workplace?</label>
+                <input type="text" name="text5" id="text5" class="form-control" placeholder="Enter your answer" required>
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="text6">6. Are you more likely to make decisions based on objective analysis and logic, or do you rely on your personal values and emotions?</label>
+                <input type="text" name="text6" id="text6" class="form-control" placeholder="Enter your answer" required>
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="text7">7. Do you prefer structured routines and plans or do you thrive in flexible and spontaneous environments?</label>
+                <input type="text" name="text7" id="text7" class="form-control" placeholder="Enter your answer" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Predict
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

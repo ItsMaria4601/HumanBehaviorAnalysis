@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login Form </title>
+      <link rel="stylesheet" href="login.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title">
+            Admin Login
+         </div>
+         <form id="loginForm">
+            <div class="field">
+               <input type="text" id="email" required>
+               <label>Email Address</label>
+            </div>
+            <div class="field">
+               <input type="password" id="password" required>
+               <label>Password</label>
+            </div>
+            <div class="field">
+               <input type="submit" value="Login">
+            </div>
+         </form>
+      </div>
+      <script>
+         // Handle form submission
+         document.getElementById("loginForm").addEventListener("submit", function(event) {
+           event.preventDefault(); // Prevent the form from submitting
+         
+           // Get entered email and password
+           var email = document.getElementById("email").value;
+           var password = document.getElementById("password").value;
+         
+           // Check if the entered email and password are correct
+           if (email === "mariaasad70@gmail.com" && password === "maria123") {
+             // Redirect to the admin page or perform other actions
+             window.location.href = "/admin";
+           } else {
+             // Show an alert message for incorrect email or password
+             alert("Wrong email or password. Please try again.");
+           }
+         });
+      </script>
+   </body>
+</html>
