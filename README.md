@@ -11,20 +11,21 @@ The Human Behavior Analysis Web App offers a user-friendly interface where users
 Once the user submits the questionnaire, the app processes the data using advanced Natural Language Processing (NLP) techniques. It applies a pre-trained machine learning ensemble model to analyze the text data, making predictions about the user's behavior based on the provided inputs.
 
 💡 Key Features:
-1. User-friendly Interface: The web app offers an intuitive and interactive interface for users to fill out the questionnaire effortlessly.
 
-2. Realtime Predictions: Leveraging Firebase Realtime Database, the app delivers instant predictions about the user's behavior after processing the input data.
+Questionnaire: Users can fill out a questionnaire with text-based responses.
+Personality Analysis: Machine learning models analyze the text data to predict personality traits.
+Real-Time Results: Predictions are displayed instantly on the web app.
+Admin Dashboard: An admin page displays the collected data in a tabular form, facilitating easy analysis.
+Data Management: Admins can delete data records from the Firebase Realtime Database.
 
-3. Data Management: The app securely stores user responses and predictions in the Firebase Realtime Database for easy access and analysis.
-
-4. Admin Panel: Administrators can access an admin page to view, manage, and delete user entries from the database.
-
-5. Scalable Architecture: The app is designed with scalability in mind, allowing easy expansion and future enhancements.
+Deployment with Ngrok:
+The project leverages Ngrok for seamless deployment during development. Ngrok provides a secure tunnel to the locally hosted Flask app, enabling real-time access and feedback from colleagues and stakeholders. By integrating Ngrok into the development environment, the app becomes accessible via a dynamically generated Ngrok URL. This allows for easy sharing and presentation of the web app without the need for complicated server deployments.
 
 🔍 Technologies Used:
 - Python (Flask): Backend development and server-side scripting.
 - Firebase Realtime Database: Realtime data storage and retrieval.
 - Natural Language Processing (NLP): Analyzing textual data for behavior predictions.
+- Bootstrap, HTML/CSS/JS
 
 📈 Impact:
 This Human Behavior Analysis Web App has significant potential across various domains, including market research, personality assessment, and customer behavior analysis. It can be tailored to meet specific business needs and provide valuable insights into user behaviors and preferences.
