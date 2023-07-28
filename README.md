@@ -30,6 +30,10 @@ The project leverages Ngrok for seamless deployment during development. Ngrok pr
 - Firebase Realtime Database: Realtime data storage and retrieval.
 - Natural Language Processing (NLP): Analyzing textual data for behavior predictions.
 - Bootstrap, HTML/CSS/JS
+- ML Models for prediction used:
+   Logistic Regression, SVM, Decision Tree
+- A final ensemble model used to make the accuracy higher.
+- Validation of ML Models used
 
 📈 Impact:
 This Human Behavior Analysis Web App has significant potential across various domains, including market research, personality assessment, and customer behavior analysis. It can be tailored to meet specific business needs and provide valuable insights into user behaviors and preferences.
