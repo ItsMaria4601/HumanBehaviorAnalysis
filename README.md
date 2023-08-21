@@ -39,3 +39,6 @@ The project leverages Ngrok for seamless deployment during development. Ngrok pr
 This Human Behavior Analysis Web App has significant potential across various domains, including market research, personality assessment, and customer behavior analysis. It can be tailored to meet specific business needs and provide valuable insights into user behaviors and preferences.
 
 I am proud to have worked on this exciting project, and I look forward to exploring further applications and improvements in the field of behavior analysis and data-driven decision-making.
+![guu](https://github.com/ItsMaria4601/HumanBehaviorAnalysis/assets/83135692/abf9d8a9-a08f-4ad9-a04e-e03a9fefa485)
+![pre](https://github.com/ItsMaria4601/HumanBehaviorAnalysis/assets/83135692/cd88be62-44be-4978-b40d-cea86768f564)
+![admin](https://github.com/ItsMaria4601/HumanBehaviorAnalysis/assets/83135692/c2b6ebc2-6007-4412-b72b-2b08ef9a5b83)
